@@ -7,6 +7,7 @@ import './Main.css';
 export default class Main extends Component {
     state = {
         searchResults: [],
+        searchType: 'people',
         loading: false
     }
 
@@ -22,13 +23,16 @@ export default class Main extends Component {
         event.preventDefault();
         //get the search terms entered by the user
         const searchTerms = event.target.searchInput.value;
+        //get search type entered by the user
+        const searchType = event.target.searchType.value;
         //empty results and provide loading screen
         this.setState({
             searchResults: [],
+            searchType: searchType,
             loading: true
         });
         //make a fetch call with the search terms
-        fetch(`${config.API_ENDPOINT}/people/?search=${searchTerms}`)
+        fetch(`${config.API_ENDPOINT}/${searchType}/?search=${searchTerms}`)
             .then(res => {
                 if (!res.ok) {
                     return res.json().then(e => Promise.reject(e))
@@ -47,7 +51,7 @@ export default class Main extends Component {
         return(
             <main>
                 <Search showResults={this.handleShowResults} onSearch={this.handleSearch}/>
-                <Results results={this.state.searchResults} />
+                <Results results={this.state.searchResults} type={this.state.searchType}/>
                 {this.state.loading && <h3>searching the galaxy...</h3>}
             </main>
         );
