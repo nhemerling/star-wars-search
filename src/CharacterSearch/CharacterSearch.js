@@ -8,8 +8,6 @@ export default class CharacterSearch extends Component {
         event.preventDefault();
         //get the search terms entered by the user
         const searchTerms = event.target.searchInput.value;
-        // console.log(searchTerms);
-        // console.log(config.API_ENDPOINT);
         //make a fetch call with the search terms
         fetch(`${config.API_ENDPOINT}/people/?search=${searchTerms}`)
             .then(res => {
@@ -19,11 +17,6 @@ export default class CharacterSearch extends Component {
                 return res.json()
             })
             .then(data => {
-                // console.log(data);
-                // console.log(data.results);
-                // console.log(data.results[0]);
-                // console.log(data.results[0].name)
-                // console.log('is this an array?', typeof data.results);
                 this.props.showResults(data.results)
             })
             .catch(error => {
