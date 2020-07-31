@@ -1,4 +1,4 @@
 export default {
-    API_ENDPOINT: 'https://swapi.co/api/'
+    API_ENDPOINT: 'https://swapi-thinkful.herokuapp.com/api'
 }
   

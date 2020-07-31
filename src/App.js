@@ -2,20 +2,18 @@ import React, { Component } from 'react';
 import Header from './Header/Header';
 import Main from './Main/Main';
 import './App.css';
+import { Route } from 'react-router-dom';
 
-class App extends Component {
-
-
-
-
+export default class App extends Component {
   render() {  
     return (
-      <main className='App'>
+      <div className='App'>
         <Header />
-        <Main />
-      </main>
+        <Route
+          exact path='/'
+          component={Main}
+        />
+      </div>
     );
   }
 }
-
-export default App;
