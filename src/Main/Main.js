@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CharacterSearch from '../CharacterSearch/CharacterSearch';
+import Search from '../Search/Search';
 import Results from '../Results/Results';
 import config from '../config';
 import './Main.css';
@@ -46,7 +46,7 @@ export default class Main extends Component {
     render() {
         return(
             <main>
-                <CharacterSearch showResults={this.handleShowResults} onSearch={this.handleSearch}/>
+                <Search showResults={this.handleShowResults} onSearch={this.handleSearch}/>
                 <Results results={this.state.searchResults} />
                 {this.state.loading && <h3>searching the galaxy...</h3>}
             </main>
