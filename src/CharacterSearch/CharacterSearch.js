@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './CharacterSearch.css';
 
 export default class CharacterSearch extends Component {
-
-    
-
     render() {
         return (
             <div className="Search">

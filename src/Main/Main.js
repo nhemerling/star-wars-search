@@ -10,6 +10,7 @@ export default class Main extends Component {
         loading: false
     }
 
+    //set state when user searches new data
     handleShowResults = (searchData) => {
         this.setState({
             searchResults: searchData,
