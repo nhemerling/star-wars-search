@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results component renders the UI as expected with empty results array 1`] = `
+<div
+  className="Results"
+/>
+`;
+
+exports[`Results component renders the UI as expected with empty results array and type set as vehicles 1`] = `
+<div
+  className="Results"
+/>
+`;
+
+exports[`Results component renders the UI as expected with no props 1`] = `
+<div
+  className="Results"
+/>
+`;

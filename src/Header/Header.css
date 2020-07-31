@@ -1,0 +1,11 @@
+.Header a,
+.Header a:active,
+.Header a:focus,
+.Header a:visited {
+    text-decoration: none;
+    color: #f8b020;
+}
+
+.Header a:hover {
+    color: #ff9900;
+}

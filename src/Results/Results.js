@@ -58,5 +58,6 @@ export default function Results(props) {
 }
 
 Results.defaultProps = {
-    results: []
+    results: [],
+    type: 'people'
 }
