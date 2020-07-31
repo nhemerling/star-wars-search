@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CharacterSearch from './CharacterSearch';
+import Search from './Search';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<CharacterSearch />, div);
+  ReactDOM.render(<Search />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
